@@ -6,11 +6,22 @@
   </head>
   <body>
     <h1>Hello World!</h1>
-    <p>"My name is Andrew"</p>
+    <p>My name is Andrew</p>
     <script type="text/javascript">
       var userName=prompt("Hello! Whats' your name?")
-      alert("Hello " + userName + " nice to meet you!")
+      // alert("Hello " + userName + " nice to meet you!")
+
       console.log("userName Var: " +userName);
+
+      if (userName === "Andrew") {
+        console.log("Andrew is correct.");
+      } else if (userName === "Molly") {
+        console.log("Molly is correct.");
+      } else {
+        console.log("you didn't guess the correct name");
+      }
+
+
 
     </script>
   </body>
