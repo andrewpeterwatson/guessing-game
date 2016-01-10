@@ -8,20 +8,62 @@
     <h1>Hello World!</h1>
     <p>My name is Andrew</p>
     <script type="text/javascript">
-      var RALPH=prompt("Hello! My name is RALPH, your Radical Adventure Leveraging Personal Helper! But you can call me RALPH. Lets see how well you pay attention; what's my name?")
+      var RALPH=prompt("Hello! My name is RALPH, your Radical Adventure Leveraging Personal Helper! But you can call me RALPH. Lets see how well you pay attention. what's my name?");
       // alert("Hello " + RALPH + " nice to meet you!")
 
-      console.log("RALPH Var: " +RALPH);
+      console.log("RALPH Var: " + RALPH);
 
       if (RALPH === "RALPH") {
         console.log("RALPH is correct.");
-        var userName=prompt("That's right! And what may I call you?")
+        var userName=prompt("That's right! And what may I call you?");
       } else if (RALPH === "Radical Adventure Leveraging Personal Helper") {
+        userName=prompt("That's right! And what may I call you?");
         console.log("RALPH is correct.");
       } else {
+        userName = prompt("Close, but it's RALPH... I am a little OCD about it. that's okay though! what may I call you?");
         console.log("That is incorrect");
       }
 
+      var favColor = prompt(userName + ", nice to meet you! Let's keep going. What is my favorite color? I'll give you a hint: it rhymes with 'bed'");
+      var color1 = favColor.toUpperCase()
+
+      if (color1 === "RED") {
+        var favFood =  prompt("Nailed it! How about my favorite food? This one sounds like 'lacos, also, it's not cereal.");
+        var food1 = favFood.toUpperCase()
+      } else {
+        favFood = prompt("HHmmmmm... Red, red is the only true color. What would you say my favorite food would be? Hint: it's not cereal");
+        food1 = favFood.toUpperCase()
+      }
+
+      if (food1 === "TACOS") {
+        var ageGuess = prompt ("You are on a roll my friend! And one more just for fun. How old am I?");
+        var num1 = parseInt(ageGuess)
+      } else if (food1 === "cereal") {
+        ageGuess = prompt ("I thought I said it was NOT cereal?? oh well. How old would you say I am?");
+        num1 = parseInt(ageGuess)
+      } else {
+        ageGuess = prompt ("Well, tacos would have been ideal, but I can also always go for some Mega-Bytes. One more, How old do you think I am?");
+        num1 = parseInt(ageGuess)
+      }
+      var answer = false
+      while (answer == false) {
+      if (num1 === 42) {
+        alert("You should work for the circus! That's all for now, but you can be sure that I'll be around... watching...");
+        answer = true
+      } else if (num1 <= 42) {
+        ageGuess = prompt("It looks like you are a bit low. I'm Flattered of course but... try again.");
+        num1 =parseInt(ageGuess)
+        answer = false
+      } else if (num1 >= 42) {
+        ageGuess = prompt("Really?!? I look that old?!?! thanks... why not just give that another guess.");
+        num1 =parseInt(ageGuess)
+        answer = false
+      } else {
+        ageGuess = prompt("That's a new one! wrong, but new. try again.");
+        num1 =parseInt(ageGuess)
+        answer=false
+      }
+    }
 
 
     </script>
