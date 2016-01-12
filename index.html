@@ -14,11 +14,6 @@
     var totalWrong = 0;
     while (game === true) {
 
-    // var totalRight = 0;
-    // var totalWrong = 0;
-    // var totalAnswers = arr[""];
-
-
       var RALPH = prompt("Hello! My name is RALPH, your Radical Adventure Leveraging Personal Helper!\nBut you can call me RALPH.\nLets see how well you pay attention.\nwhat's my name?");
 
       console.log("RALPH Var: " + RALPH);
@@ -74,7 +69,7 @@
       } else if (ageGuess >= 42) {
           count++;
           ageGuess = parseInt(prompt("Really?!? I look that old?!?! thanks... why not just give that another guess."));
-      } else if (count === 4) {
+      } else if (count === 3) {
           alert("Well, I had more faith in you than that. I'm 42. I'll always be 42.");
           break;
       } else {
