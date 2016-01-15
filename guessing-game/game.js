@@ -37,7 +37,7 @@ var ageGuess = parseInt(prompt("lets try one a bit harder. I'll give 5 guesses f
 
 while (count < 6) {
   if (count === 5) {
-      alert("Well, I had more faith in you than that. I'm 42. I'll always be 42.");
+      ans1.innerHTML = "Well, I had more faith in you than that. I'm 42. I'll always be 42.";
       break;
   } else if (ageGuess === 42 && count === 1) {
       ans1.innerHTML = "You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...";
@@ -65,7 +65,6 @@ var bonus2 = prompt("I have a backpack full of Treasures that I've collected.\nG
 var treasure = ["coins","torch","emerald","bracelet","necklace","figurine","grail","picture","portrait","trunk","trident","bar","coffin","chalice","egg","diamond","ruby","zorkmid","stamp","small statue","crystal sphere","tin of spices","violin","dimwits crown"];
 for (var i = 0; i < treasure.length; i++) {
   var answerBonus2 = bonus2.toLowerCase()
-
   if (answerBonus2 === treasure[i]) {
     bonus++;
     ans1.innerHTML = "You are cut from my own mold!\nYou guessed my Treasure!";
@@ -73,8 +72,9 @@ for (var i = 0; i < treasure.length; i++) {
   } else {
     ans1.innerHTML = "It seems you are not whom I had hoped you were... sad";
     break;
+  }
 }
-}
+
 
 var gamePlays = prompt(("Would you like to play again?")).toLowerCase();
     if (gamePlays === "yes") {
@@ -83,12 +83,12 @@ var gamePlays = prompt(("Would you like to play again?")).toLowerCase();
       ans1.innerHTML = "Thanks for playing " + userName + "!";
       break;
   } else {
-      alert("I'll take that as a no. C-ya!");
+      ans1.innerHTML = "I'll take that as a no. C-ya!";
       break
   }
 }
 
-alert("STATS:\nGames Palyed: " + gameCount + "\nGuesses Right: " + totalRight + "\nGuesses Wrong: " + totalWrong +"\nBONUS: " + bonus)
+ans1.innerHTML = "STATS:\nGames Palyed: " + gameCount + "\nGuesses Right: " + totalRight + "\nGuesses Wrong: " + totalWrong +"\nBONUS: " + bonus;
 
 //Old code
 //     if (RALPH === "RALPH") {

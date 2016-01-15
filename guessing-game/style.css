@@ -1,0 +1,41 @@
+
+input {
+  cursor: crosshair;
+}
+html {
+
+}
+h1 {
+  background: pink;
+  font-size: 10px;
+}
+h2 {
+  background: yellow;
+  font-size: 20;
+  font-family: cursive;
+}
+h3 {
+  font-family: fantasy;
+}
+p {
+font-family: "Lobster Two";
+}
+#headerOne {
+
+}
+.header {
+
+}
+.list  li {
+
+}
+li:hover {
+  cursor:crosshair;
+}
+li:link {
+
+}
+li:visited {
+  color: blue;
+  font-size: 30px;
+}
