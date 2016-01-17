@@ -17,7 +17,9 @@ var guessingGame = true;
 while (guessingGame === true) {
 
 var questions = ["Lets see how well you pay attention. what's my name?","Lets move on. What is my favorite color? I'll give you a hint: it rhymes with 'bed'","How about my favorite food? This one sounds like 'lacos' also, it's not cereal"];
-var answers = ["RALPH","REDS","TACOS"];
+
+var answers = ["RALPH","RED","TACOS"];
+
 var userAnswers = [];
 
 function game(questions, answers) {
