@@ -1,39 +1,45 @@
 
 var ans1 = document.getElementById("a1");
+var ans2 = document.getElementById("a2");
+var ans3 = document.getElementById("a3");
+var ans4 = document.getElementById("a4");
 var userAnswersId = document.getElementById("a2")
-// var greeting = document.getElementById("a2");
-// var ans3 = document.getElementById("a3");
+var stats = document.getElementById("a3")
+var responseCall = document.getElementById("response");
 
 var gameCount = 1;
 var totalWrong = 0;
 var totalRight = 0;
 var bonus = 0;
+var questions = ["Lets see how well you pay attention. what's my name?","Lets move on. What is my favorite color? I'll give you a hint: it rhymes with 'bed'","How about my favorite food? This one sounds like 'lacos' also, it's not cereal"];
+var answers = ["RALPH","RED","TACOS"];
+var responses = [];
+var userAnswers = [];
 
 
 var userName = prompt("Hello! My name is RALPH, your Radical Adventure Leveraging Personal Helper! But you can call me RALPH. What's your name?");
-ans1.innerHTML = userName + " it's great to meet you.\nI think it would be best for you to get to know me.\nSo here's a little game!";
+userAnswers.push(userName);
+userAnswersId.innerHTML = (userAnswers);
+responses.push(" it's great to meet you.\nI think it would be best\n for you to get to know me.\nSo here's a little game!");
+responseCall.innerHTML = responses;
 
 var guessingGame = true;
 while (guessingGame === true) {
 
-var questions = ["Lets see how well you pay attention. what's my name?","Lets move on. What is my favorite color? I'll give you a hint: it rhymes with 'bed'","How about my favorite food? This one sounds like 'lacos' also, it's not cereal"];
-
-var answers = ["RALPH","RED","TACOS"];
-
-var userAnswers = [];
 
 function game(questions, answers) {
   var ques = prompt(questions).toUpperCase();
+  userAnswers.push(ques)
+  userAnswersId.innerHTML = userAnswers;
 
   if (answers === ques) {
     totalRight++;
-    userAnswers.push(ques)
-    userAnswersId.innerHTML = userAnswers;
-    ans1.innerHTML = "You got it!";
+    responses.push("You got it!");
+    responseCall.innerHTML = responses;
   } else {
     totalWrong++
-    userAnswers.push(ques)
-    ans1.innerHTML = "Nuts... not quite right.";
+    responses.push("Nuts... not quite right.");
+    responseCall.innerHTML = responses;
   }
 }
 for (var i = 0; i < questions.length; i++) {
@@ -44,14 +50,17 @@ var ageGuess = parseInt(prompt("lets try one a bit harder. I'll give 5 guesses f
 
 while (count < 6) {
   if (count === 5) {
-      ans1.innerHTML = "Well, I had more faith in you than that. I'm 42. I'll always be 42.";
+    responses.push("Well, I had more faith in you than that. I'm 42. I'll always be 42.");
+    responseCall.innerHTML = responses;
       break;
   } else if (ageGuess === 42 && count === 1) {
-      ans1.innerHTML = "You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...";
+    responses.push("You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...");
+    responseCall.innerHTML = responses;
       bonus++
       break;
   } else if (ageGuess === 42) {
-      ans1.innerHTML = "You should work for the circus! You guessed my age in " + count + " trys! That's all for now, but you can be sure that I'll be around... watching...";
+    responses.push("You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...");
+    responseCall.innerHTML = responses;
       bonus++
       break;
   } else if (ageGuess < 42) {
@@ -95,7 +104,7 @@ var gamePlays = prompt(("Would you like to play again?")).toLowerCase();
   }
 }
 
-ans1.innerHTML = "STATS:\nGames Palyed: " + gameCount + "\nGuesses Right: " + totalRight + "\nGuesses Wrong: " + totalWrong +"\nBONUS: " + bonus;
+stats.innerHTML = "STATS:\nGames Palyed: " + gameCount + "\nGuesses Right: " + totalRight + "\nGuesses Wrong: " + totalWrong +"\nBONUS: " + bonus;
 
 //Old code
 //     if (RALPH === "RALPH") {
