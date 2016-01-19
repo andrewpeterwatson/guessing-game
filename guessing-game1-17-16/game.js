@@ -7,6 +7,7 @@ var userAnswersId = document.getElementById("a2")
 var stats = document.getElementById("a3")
 var responseCall = document.getElementById("response");
 
+
 var gameCount = 1;
 var totalWrong = 0;
 var totalRight = 0;
@@ -76,18 +77,17 @@ while (count < 6) {
   }
 }
 ans1.innerHTML = "Ah-Ha!\nYou think the game is over?! It is far from it!";
-var bonus2 = prompt("I have a backpack full of Treasures that I've collected.\nGuess just one and you will gain +5 honor... And just be even nerdier. May Zork guide you!")
+var bonus2 = prompt("I have a backpack full of Treasures that I've collected.\nGuess just one and you will gain +5 honor... And just be even nerdier. May Zork guide you!");
 
 var treasure = ["coins","torch","emerald","bracelet","necklace","figurine","grail","picture","portrait","trunk","trident","bar","coffin","chalice","egg","diamond","ruby","zorkmid","stamp","small statue","crystal sphere","tin of spices","violin","dimwits crown"];
 for (var i = 0; i < treasure.length; i++) {
-  var answerBonus2 = bonus2.toLowerCase()
+  var answerBonus2 = bonus2.toLowerCase();
   if (answerBonus2 === treasure[i]) {
     bonus++;
     ans1.innerHTML = "You are cut from my own mold!\nYou guessed my Treasure!";
     break;
   } else {
     ans1.innerHTML = "It seems you are not whom I had hoped you were... sad";
-    break;
   }
 }
 
