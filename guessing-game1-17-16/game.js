@@ -46,25 +46,25 @@ function game(questions, answers) {
 for (var i = 0; i < questions.length; i++) {
   game(questions[i], answers[i]);
 }
-var ageGuess = parseInt(prompt("RALPH: lets try one a bit harder. I'll give 5 guesses for this one.\nHow old am I?"))
+  var ageGuess = parseInt(prompt("RALPH: lets try one a bit harder. I'll give 5 guesses for this one.\nHow old am I?"))
   var count = 1;
   userAnswers.unshift(userName + ": " + ageGuess);
   userAnswersId.innerHTML = (userAnswers);
 
 while (count < 6) {
   if (count === 5) {
-    responses.unshift("RALPH: Well, I had more faith in you than that. I'm 42. I'll always be 42.");
-    userAnswersId.innerHTML = (userAnswers);
-    responseCall.innerHTML = responses;
+      responses.unshift("RALPH: Well, I had more faith in you than that. I'm 42. I'll always be 42.");
+      userAnswersId.innerHTML = (userAnswers);
+      responseCall.innerHTML = responses;
       break;
   } else if (ageGuess === 42 && count === 1) {
-    responses.unshift("RALPH: You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...");
-    responseCall.innerHTML = responses;
+      responses.unshift("RALPH: You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...");
+      responseCall.innerHTML = responses;
       bonus++
       break;
   } else if (ageGuess === 42) {
-    responses.unshift("RALPH: You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...");
-    responseCall.innerHTML = responses;
+      responses.unshift("RALPH: You should work for the circus! You guessed my age in " + count + " try! That's all for now, but you can be sure that I'll be around... watching...");
+      responseCall.innerHTML = responses;
       bonus++
       break;
   } else if (ageGuess < 42) {
@@ -97,14 +97,14 @@ var treasure = ["coins","torch","emerald","bracelet","necklace","figurine","grai
 var answerBonus2 = bonus2.toLowerCase();
 for (var i = 0; i < treasure.length; i++) {
   if (answerBonus2 === treasure[i]) {
-    bonus++;
-    responses.unshift("RALPH: You are cut from my own mold!\nYou guessed my Treasure!");
-    responseCall.innerHTML = responses;
-    break;
+      bonus++;
+      responses.unshift("RALPH: You are cut from my own mold!\nYou guessed my Treasure!");
+      responseCall.innerHTML = responses;
+      break;
   } else {
-    responseCall.innerHTML = responses;
+      responseCall.innerHTML = responses;
+      responses.unshift("RALPH: It seems you are not whom I had hoped you were... sad");
   }
-  responses.unshift("RALPH: It seems you are not whom I had hoped you were... sad");
 }
 
 
@@ -118,15 +118,15 @@ var gamePlays = prompt(("RALPH: Would you like to play again?")).toLowerCase();
   } else {
       responses.unshift("RALPH: I'll take that as a no. C-ya!");
       responseCall.innerHTML = responses;
-      break
+      break;
   }
 }
 if ((totalRight + bonus) === totalWrong || (totalRight + bonus) > totalWrong) {
-  console.log("user wins");
-img.innerHTML = "<img src = 'http://photoshopadventures.com/misc/sword.png' alt = 'Sword of Destiny' align = 'middle'>You have won! The Sword of Destiny is granted to you!"
+    console.log("user wins");
+    img.innerHTML = "<img src = 'http://photoshopadventures.com/misc/sword.png' alt = 'Sword of Destiny' align = 'middle'>You have won! The Sword of Destiny is granted to you!"
 } else {
-  console.log("user loses");
-  img.innerHTML = "<img src = 'http://33.media.tumblr.com/27ebc8f43e1f517e03272d0e8f648ce2/tumblr_inline_mzaagqzs621r9ajsd.png' alt = 'Skull of the cursed' align = 'middle'>You have failed, and so you shall fall."
+    console.log("user loses");
+    img.innerHTML = "<img src = 'http://33.media.tumblr.com/27ebc8f43e1f517e03272d0e8f648ce2/tumblr_inline_mzaagqzs621r9ajsd.png' alt = 'Skull of the cursed' align = 'middle'>You have failed, and so you shall fall."
 }
 
 stats.innerHTML = "STATS:\nGames Palyed: " + gameCount + "\nGuesses Right: " + totalRight + "\nGuesses Wrong: " + totalWrong +"\nBONUS: " + bonus;
