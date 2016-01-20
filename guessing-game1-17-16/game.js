@@ -1,6 +1,10 @@
 
 var ans1 = document.getElementById("a1");
 var ans2 = document.getElementById("a2");
+<<<<<<< HEAD
+=======
+var ans3 = document.getElementById("a3");
+>>>>>>> 08b209c8234cad9233a617178679ee2d616929f0
 var img = document.getElementById("IMG1");
 var userAnswersId = document.getElementById("a2")
 var responseCall = document.getElementById("response");
@@ -121,10 +125,17 @@ var gamePlays = prompt(("RALPH: Would you like to play again?")).toLowerCase();
 }
 if ((totalRight + bonus) === totalWrong || (totalRight + bonus) > totalWrong) {
     console.log("user wins");
+<<<<<<< HEAD
     img.innerHTML = "<img src = 'http://photoshopadventures.com/misc/sword.png' alt = 'Sword of Destiny' align = 'middle'>You have won! The Sword of Destiny is granted to you!";
 } else {
     console.log("user loses");
     img.innerHTML = "<img src = 'http://33.media.tumblr.com/27ebc8f43e1f517e03272d0e8f648ce2/tumblr_inline_mzaagqzs621r9ajsd.png' alt = 'Skull of the cursed' align = 'middle'>You have failed, and so you shall fall.";
+=======
+    img.innerHTML = "<img src = 'http://photoshopadventures.com/misc/sword.png' alt = 'Sword of Destiny' align = 'middle'>You have won! The Sword of Destiny is granted to you!"
+} else {
+    console.log("user loses");
+    img.innerHTML = "<img src = 'http://33.media.tumblr.com/27ebc8f43e1f517e03272d0e8f648ce2/tumblr_inline_mzaagqzs621r9ajsd.png' alt = 'Skull of the cursed' align = 'middle'>You have failed, and so you shall fall."
+>>>>>>> 08b209c8234cad9233a617178679ee2d616929f0
 }
 
 stats.innerHTML = "STATS:\nGames Palyed: " + gameCount + "\nGuesses Right: " + totalRight + "\nGuesses Wrong: " + totalWrong +"\nBONUS: " + bonus;
