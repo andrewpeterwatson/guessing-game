@@ -1,4 +1,3 @@
-
 var ans1 = document.getElementById("a1");
 var ans2 = document.getElementById("a2");
 var ans3 = document.getElementById("a3");
